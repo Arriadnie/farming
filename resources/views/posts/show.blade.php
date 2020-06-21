@@ -13,7 +13,7 @@
         </div>
     @endif
 
-    <div style="background: url({{ Storage::disk(config('voyager.storage.disk'))->url(str_replace('\\', '/', $post->image)) }}) no-repeat center center / cover; background-attachment: fixed;" class="page-header">
+    <div style="background: url({{ Storage::disk(config('voyager.storage.disk'))->url(str_replace('\\', '/', $post->image)) }}) no-repeat center bottom / cover; background-attachment: fixed;" class="page-header">
         <div class="page-header-overlay"></div>
     </div>
 

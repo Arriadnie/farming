@@ -5,7 +5,7 @@
     </div>
     <p class="three-block-name">{{ $item->getTranslatedAttribute('title') }}</p>
     <p class="three-block-description"><span>{{ $item->getTranslatedAttribute('body') }}</span></p>
-    <a href="{{ $item->button_link ?? "#" }}" class="more white" target="_blank">
+    <a href="{{ $item->button_link ?? "#" }}" class="more white">
         {{ $item->getTranslatedAttribute('button_title') ?? 'Перейти' }}
     </a>
 </div>

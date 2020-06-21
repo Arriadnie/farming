@@ -1,6 +1,6 @@
 <header>
     <a href="/" class="logo-wrap">
-        <img src="{{ asset('/image/dorad.png') }}" alt="">
+        <img src="{{ asset('/image/logo-color.png') }}" alt="">
     </a>
     <div class="main-header">
         @include('includes.header-socials')
@@ -10,12 +10,6 @@
             <nav>
                 {{ menu('main-navigation', 'menus/main-navigation') }}
             </nav>
-
-            <div class="search-btn">
-                <svg><use xlink:href="#search"></use></svg>
-            </div>
-
-            @include('includes.search')
 
         </div>
     </div>

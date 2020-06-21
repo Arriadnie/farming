@@ -18,6 +18,7 @@ import {
     isExist,
     createEvent
 } from './delta-functions'
+import Chart from 'chart.js';
 
 
 // import "./lazy-load"
@@ -48,17 +49,9 @@ let prevArrow = `<svg class="prev slide-arrow" xmlns="http://www.w3.org/2000/svg
  *********************/
 import $ from "jquery";
 
-// window.$ = window.jQuery = $;
 require("slick-carousel");
 require("@fancyapps/fancybox");
-// import "jquery-ui/ui/widgets/slider";
-// import "jquery-ui/ui/widgets/datepicker";
-// import "jquery-ui-touch-punch";
-// import "jquery.maskedinput/src/jquery.maskedinput"
 
-// require("objectFitPolyfill");
-//
-// $.fancybox.defaults.loop = "true";
 /*********************
  * Section import vanilla JS libs
  * Import examples:
@@ -114,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
             prevArrow: prevArrow,
             nextArrow: nextArrow,
             autoplay: true,
-            autoplaySpeed: 3800,
+            autoplaySpeed: 6500,
             pauseOnHover: false
         })
     });
@@ -132,6 +125,37 @@ document.addEventListener('DOMContentLoaded', function (event) {
             slidesToScroll: 1,
             autoplaySpeed: 3000,
             pauseOnHover: false
+        })
+    });
+
+    isExist('.chart-item', (items) => {
+        items.forEach(function(item) {
+            let tools = JSON.parse(item.getAttribute('data-tools'));
+            let data = JSON.parse(item.querySelector('script').innerText);
+
+            if (!data || !tools) {
+                return
+            }
+
+            let ctx = item.querySelector('canvas');
+            let myChart = new Chart(ctx, {
+                type: tools.type,
+                data: data,
+                options: {
+                    layout: {
+
+                    },
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                min: tools.min,
+                                max: tools.max
+                            }
+                        }]
+                    }
+                }
+            });
+
         })
     })
 });
@@ -173,19 +197,6 @@ function setEqualHeight(slider, selector) {
 
 }
 
-function onOpenModal() {
-    document.documentElement.style.overflow = 'hidden';
-    document.documentElement.style.marginRight = `${window.site.scrollBarWidth}px`;
-    document.querySelector('header').style.marginRight = `${window.site.scrollBarWidth}px`;
-}
-
-function onCloseModal() {
-
-    document.documentElement.style.overflow = '';
-    document.documentElement.style.marginRight = ``;
-    document.querySelector('header').style.marginRight = ``;
-
-}
 
 function addTableWrap(table, index) {
     let wrapper = document.createElement('div');

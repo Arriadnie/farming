@@ -1,7 +1,7 @@
 <footer>
     <div class="footer-content">
         <div class="footer-logo">
-            <img src="{{ asset('/image/dorad.png') }}" alt="">
+            <img src="{{ asset('/image/logo.png') }}" alt="">
         </div>
     </div>
 
@@ -46,7 +46,7 @@
        </div>
    </div>
     <div class="copyright">
-        <p>{{ date('Y') }} Dorada ©</p>
+        <p>{{ date('Y') }} CrimFarming ©</p>
         <p>created by Zirael</p>
     </div>
 

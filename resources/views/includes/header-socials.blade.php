@@ -1,10 +1,10 @@
 <div class="header-socials">
     <div class="header-socials-list">
-        @foreach(App\Models\SocialNetwork::all() as $network)
-            <a href="{{ $network->link }}" target="_blank">
-                <img src="{{ $network->getImage(true) }}" alt="">
-            </a>
-        @endforeach
+{{--        @foreach(App\Models\SocialNetwork::all() as $network)--}}
+{{--            <a href="{{ $network->link }}" target="_blank">--}}
+{{--                <img src="{{ $network->getImage(true) }}" alt="">--}}
+{{--            </a>--}}
+{{--        @endforeach--}}
 
         @foreach(explode(',', setting('contacts.email')) as $email)
             <a type="mail" href="mailto:{{ $email }}">

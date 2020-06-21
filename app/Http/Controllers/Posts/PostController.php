@@ -44,7 +44,7 @@ class PostController extends \TCG\Voyager\Http\Controllers\VoyagerBaseController
     public function publicShow($slug) {
         return view('posts.show', [
             'post' => Post::whereSlug($slug)->firstOrFail()
-        ]);
+        ])->withShortcodes();
     }
     public function publicIndex() {
         $categories = Category::all();

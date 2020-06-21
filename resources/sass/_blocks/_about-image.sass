@@ -1,0 +1,41 @@
+.about-with-image
+    margin: get-vw(60px) 0
+    padding: get-vw(100px) get-vw(170px)
+    display: flex
+    align-items: center
+    justify-content: space-between
+    position: relative
+
+.overlay-bg
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background: rgba(0,0,0,.45)
+    z-index: 0
+
+
+.about-with-image > img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    position: absolute
+    left: 0
+    right: 0
+    z-index: -3
+    bottom: 0
+    top: 0
+
+.about-with-image .content-wrap
+    width: 45%
+    padding: get-vw(40px) get-vw(30px) get-vw(60px) get-vw(45px)
+    margin: get-vw(80px) 0
+    background: rgba(255,255,255, 0.9)
+    position: relative
+    z-index: 10
+
+
+.about-with-image .content-wrap p
+    font-size: get-vw(22px)
+    line-height: 1.3

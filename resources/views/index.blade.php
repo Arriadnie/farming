@@ -17,15 +17,21 @@
 
     [infoblock code="opis-golovna"]
 
-    [infoblock code="nashi-poslugi"]
+    [infoblock code="o-nas-s-kartinkoj"]
 
-    [infoblock code="nashi-partneri-golovna"]
+    @include('charts.index')
 
-    [infoblock code="servisi-golovna"]
 
     @include('posts.preview')
 
-    [infoblock code="korisni-posilannya-golovna"]
+    [infoblock code="servisi-golovna"]
+
+
+
+
+    [infoblock code="nashi-partneri-golovna"]
+
+{{--    [infoblock code="korisni-posilannya-golovna"]--}}
 
 @stop
 

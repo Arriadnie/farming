@@ -1,0 +1,58 @@
+.technologies-wrap
+    padding: get-vw(10px) 0
+    width: get-calc-vw(100%, '+', 240px)
+    margin-left: get-vw(-120px)
+    margin-right: get-vw(-120px)
+
+.technologies-list
+    display: flex
+    flex-direction: column
+
+.technology-item
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    margin-bottom: get-vw(150px)
+
+.technology-item:nth-child(odd) .image
+    order: 5
+    margin-left: get-vw(90px)
+    margin-right: 0
+
+
+.technology-item .content
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+.technology-item .image
+    width: 55%
+    height: get-vw(500px)
+    margin-right: get-vw(80px)
+    display: flex
+    flex-shrink: 0
+
+.technology-item .image img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.technology-item .name
+    font-size: get-vw(38px)
+    font-weight: $bold
+    color: $mainBg
+    margin-bottom: get-vw(35px)
+
+.technology-item .description
+    font-size: get-vw(22px)
+    line-height: 1.3
+
+.technology-item .more
+    margin-top: get-vw(35px)
+
+
+
+
+
+
