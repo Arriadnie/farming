@@ -21,6 +21,8 @@
 
     @include('charts.index')
 
+    @include('infoblocks.tour-preview.index')
+
 
     @include('posts.preview')
 

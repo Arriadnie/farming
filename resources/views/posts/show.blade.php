@@ -25,6 +25,7 @@
 
             <div class="editor-content">
                 {!! $post->getTranslatedAttribute('body') !!}
+
             </div>
             <div class="post-date">
                 <p>{{ $post->created_at->format('d-m-Y') }}</p>
