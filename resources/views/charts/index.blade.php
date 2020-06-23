@@ -6,7 +6,7 @@
     <div data-tools='{
             "type": "line",
             "min": 32,
-            "max": 35 }'
+            "max": 45 }'
          class="chart-item">
         <script type="application/json">
         {
