@@ -295,7 +295,6 @@
                 this.cells.push(rowArray);
                 this.tbody.append(rowElement);
             }
-
             deleteRow(id) {
                 let rowIndex = this.rows.findIndex(c => c.id === id);
                 this.rows[rowIndex].element.remove();
@@ -334,6 +333,17 @@
                     $('#grid-row-' + rowId).append(td);
                 }
             }
+            deleteColumn(id) {
+                let columnIndex = this.columns.findIndex(c => c.id === id);
+                this.columns[columnIndex].element.remove();
+                this.columns.splice(columnIndex, 1);
+
+                for (let i = 0; i < this.rows.length; i++) {
+                    this.cells[i][columnIndex].element.remove();
+                    this.cells[i].splice(columnIndex, 1);
+                }
+            }
+
 
             _createInput(name, value, type = 'text') {
                 let input = $('<input>');
@@ -354,15 +364,13 @@
                 return span;
             }
 
-            deleteColumn(id) {
-                let columnIndex = this.columns.findIndex(c => c.id === id);
-                this.columns[columnIndex].element.remove();
-                this.columns.splice(columnIndex, 1);
 
-                for (let i = 0; i < this.rows.length; i++) {
-                    this.cells[i][columnIndex].element.remove();
-                    this.cells[i].splice(columnIndex, 1);
-                }
+            getData() {
+                return {
+                    ColumnCaptions: this.columns.map(c => c.element.children()[0].value),
+                    RowCaptions: this.rows.map(r => $(r.element.children()[0]).children()[0].value),
+                    values: this.cells.map(r => r.map(c => c.element.children()[0].value))
+                };
             }
 
 
@@ -379,13 +387,19 @@
 
         var tableGrid = new TableGrid('chart-data-grid');
 
-        tableGrid.initData({
-            ColumnCaptions: ['Январь', 'Февраль', 'Март', 'Апрель'],
-            RowCaptions: ['Корови', 'Бики'],
-            values: [
-                [1, 2, 3, 4],
-                [7, 8, 9, 10]
-            ]
+        $('input[name="data_json"]').parent().hide();
+        var jsonStr = $('input[name="data_json"]').val();
+        if (jsonStr) {
+            tableGrid.initData(JSON.parse(jsonStr));
+        }
+
+
+        $('button[type="submit"]').on('click', function(e) {
+            e.preventDefault();
+
+            $('input[name="data_json"]').val(JSON.stringify(tableGrid.getData()));
+
+            $('form').submit();
         });
 
     </script>
