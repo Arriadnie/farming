@@ -1,8 +1,12 @@
 .chart-wrap
     padding: get-vw(100px) get-vw(170px)
+    +mediaSize(750)
+        padding: get-m-vw(40px) get-m-vw(20px)
 
 .chart-wrap .subtitle
     font-size: get-vw(24px)
+    +mediaSize(750)
+        font-size: get-m-vw(16px)
 
 .chart-wrap .btn-wrap
     display: flex
@@ -13,6 +17,9 @@
     width: 100%
     height: get-vw(600px)
     margin: get-vw(80px) 0
+    +mediaSize(750)
+        height: get-m-vw(200px)
+        margin: get-m-vw(25px) 0
 
 .chart-item canvas
     width: 100%

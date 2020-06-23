@@ -3,6 +3,8 @@
     flex-direction: column
     align-items: center
     padding: get-vw(100px) get-vw(340px)
+    +mediaSize(750)
+        padding: get-m-vw(50px) get-m-vw(20px)
 
 .about-wrap .about-title
     font-size: get-vw(42px)
@@ -13,15 +15,23 @@
     color: #000
     font-weight: $bold
     margin-bottom: get-vw(65px)
+    +mediaSize(750)
+        font-size: get-m-vw(30px)
+        margin-bottom: get-m-vw(30px)
+
 
 .about-wrap .about-subtitle
     font-size: get-vw(25px)
     text-align: center
     color: rgba(0,0,0,.6)
     line-height: 1.25
+    +mediaSize(750)
+        font-size: get-m-vw(15px)
 
 .about-wrap .more
     margin-top: get-vw(40px)
+    +mediaSize(750)
+        margin-top: get-m-vw(30px)
 
 .about-wrap .about-title:after
     content: ''
@@ -33,4 +43,8 @@
     top: 100%
     left: 50%
     transform: translate(-50%, get-vw(15px))
+    +mediaSize(750)
+        top: 100%
+        width: get-m-vw(100px)
+        transform: translate(-50%, get-m-vw(10px))
 

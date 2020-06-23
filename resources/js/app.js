@@ -124,7 +124,15 @@ document.addEventListener('DOMContentLoaded', function (event) {
             slidesToShow: 4,
             slidesToScroll: 1,
             autoplaySpeed: 3000,
-            pauseOnHover: false
+            pauseOnHover: false,
+            responsive: [
+                {
+                   breakpoint: 750,
+                   settings: {
+                       slidesToShow: 2
+                   }
+                }
+            ]
         })
     });
 

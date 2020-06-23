@@ -5,6 +5,8 @@ footer
     width: 100%
     border-top: 1px solid rgba(0,0,0,.2)
     padding-top: get-vw(50px)
+    +mediaSize(750)
+        padding-top: get-m-vw(20px)
 
 
 .footer-content
@@ -12,17 +14,28 @@ footer
     width: 100%
     align-items: flex-start
     padding: 0 get-vw(170px)  0
+    +mediaSize(750)
+        padding: 0 get-m-vw(20px)
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
 
 .footer-left
     width: 20%
+    +mediaSize(750)
+        width: 100%
 
 .footer-logo
     width: get-vw(300px)
     height: get-vw(120px)
     display: flex
     align-items: center
-
     margin-bottom: get-vw(20px)
+    +mediaSize(750)
+        margin-bottom: get-m-vw(10px)
+        width: get-m-vw(140px)
+        height: get-m-vw(60px)
 
 .footer-logo img
     height: 100%
@@ -33,6 +46,10 @@ footer
     font-size: get-vw(22px)
     font-weight: $bold
     margin-bottom: get-vw(20px)
+    +mediaSize(750)
+        font-size: get-m-vw(18px)
+        text-align: center
+        margin-bottom: get-m-vw(15px)
 
 .footer-socials-list
     display: flex
@@ -43,9 +60,14 @@ footer
     height: get-vw(30px)
     align-items: center
     justify-content: center
+    +mediaSize(750)
+        width: get-m-vw(30px)
+        height: get-m-vw(30px)
 
 .footer-socials-list a + a
     margin-left: get-vw(20px)
+    +mediaSize(750)
+        margin-left: get-m-vw(10px)
 
 .footer-socials-list a img
     width: 100%
@@ -55,6 +77,8 @@ footer
 .footer-contact-list
     display: flex
     flex-direction: column
+    +mediaSize(750)
+        align-items: center
 
 
 .footer-contact-list a
@@ -62,9 +86,13 @@ footer
     align-items: center
     font-size: get-vw(18px)
     opacity: 0.8
+    +mediaSize(750)
+        font-size: get-m-vw(12px)
 
 .footer-contact-list a +  a
     margin-top: get-vw(15px)
+    +mediaSize(750)
+        margin-top: get-m-vw(10px)
 
 
 .footer-contact-list a img
@@ -74,9 +102,15 @@ footer
     display: flex
     flex-shrink: 0
     margin-right:  get-vw(10px)
+    +mediaSize(750)
+        width: get-m-vw(20px)
+        height: get-m-vw(20px)
+        margin-right: get-m-vw(10px)
 
 .footer-contacts + .footer-contacts
     margin-top: get-vw(40px)
+    +mediaSize(750)
+        margin-top: get-m-vw(20px)
 
 .copyright
     display: flex
@@ -88,6 +122,11 @@ footer
     margin-top: get-vw(50px)
     padding: get-vw(10px) get-vw(170px)
     background: $mainBg
+    +mediaSize(750)
+        padding: get-m-vw(10px) get-m-vw(20px)
+        margin-top: get-m-vw(20px)
+        font-size: get-m-vw(10px)
+
 
 .footer-right
 
@@ -95,6 +134,9 @@ footer
     display: flex
     align-items: flex-start
     justify-content: flex-end
+    +mediaSize(750)
+        display: none
+        
 
 .footer-menu-item
     display: flex
@@ -103,6 +145,7 @@ footer
 
 .footer-menu-item + .footer-menu-item
     margin-left: get-vw(60px)
+    +mediaSize(750)
 
 .footer-menu-item a
     font-size: get-vw(20px)

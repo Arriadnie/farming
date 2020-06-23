@@ -23,11 +23,16 @@ header.scrolled
     margin-left: get-vw(40px)
     padding-right: get-vw(40px)
     border-right: 1px solid #c1c1c1
-
     +mediaSize(1024)
         width: 80px
         height: 70px
         margin-right: auto
+    +mediaSize(750)
+        border-right: none
+        width: get-m-vw(140px)
+        height: get-m-vw(60px)
+        margin-left: get-m-vw(20px)
+
 
 .logo-wrap img
     width: 100%
@@ -157,6 +162,9 @@ header nav
 
 .main-header
     width: 100%
+    +mediaSize(1024)
+        position: absolute
+        display: none
 
 
 .languages,
