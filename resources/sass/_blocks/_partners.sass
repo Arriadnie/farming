@@ -1,5 +1,7 @@
 .partners-wrap
     padding: get-vw(100px)  get-vw(170px)
+    +mediaSize(750)
+        padding: get-m-vw(30px) get-m-vw(20px) get-m-vw(60px)
 
 .block-title
     width: 65%
@@ -12,12 +14,19 @@
     color: $mainBg
     margin-left: auto
     margin-right: auto
+    +mediaSize(750)
+        width: 100%
+        font-size: get-m-vw(28px)
+        padding-bottom: get-m-vw(10px)
+        margin-bottom: get-m-vw(15px)
 
 .block-title.left
     font-size: get-vw(40px)
     width: 100%
     text-align: left
     position: relative
+    +mediaSize(750)
+        font-size: get-m-vw(24px)
 
 .block-title:after
     content: ''
@@ -28,6 +37,8 @@
     height: 2px
     background: $mainBg
     transform: translate(-50%, 0)
+    +mediaSize(750)
+        width: get-m-vw(120px)
 
 .block-title.left:after
     left: 0
@@ -46,6 +57,11 @@
     width: get-vw(45px)
     transition: 0.3s ease
     height: get-vw(45px)
+    +mediaSize(750)
+        height: get-m-vw(40px)
+        width: get-m-vw(40px)
+        top: 100%
+        transform: translate(50%, 0)
 
 .partners-wrap .slide-arrow:hover
     opacity: 1
@@ -53,9 +69,14 @@
 .partners-wrap .slide-arrow.prev
     right: 102%
     transform: rotate(180deg) translate(-50%, 0)
+    +mediaSize(750)
+        right: 45%
+        transform: rotate(180deg) translate(50%, 0)
 
 .partners-wrap .slide-arrow.next
     left: 102%
+    +mediaSize(750)
+        left: 45%
 
 .partners-wrap .partner-item
     height: get-vw(250px)
@@ -65,6 +86,10 @@
     box-shadow: 0 2px 4px rgba(0,0,0,.15)
     align-items: center
     justify-content: center
+    +mediaSize(750)
+        height: get-m-vw(100px)
+        margin: get-m-vw(10px)
+        border-radius: get-m-vw(10px)
 
 .partner-item:hover
     box-shadow: 0 5px 10px rgba(0,0,0,.2)
@@ -74,3 +99,5 @@
     height: 100%
     padding: get-vw(20px)
     object-fit: contain
+    +mediaSize(750)
+        padding:  get-m-vw(10px)

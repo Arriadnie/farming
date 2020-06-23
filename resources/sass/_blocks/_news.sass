@@ -3,14 +3,35 @@
     display: flex
     flex-direction: column
     align-items: center
+    +mediaSize(750)
+        padding: get-m-vw(35px) get-m-vw(20px)
 
 .news-container a.more
     margin-top: get-vw(60px)
+    +mediaSize(750)
+        margin-top: get-m-vw(30px)
 
 .news-wrap
     display: flex
     margin-top: get-vw(40px)
     justify-content: center
+    +mediaSize(750)
+        margin-top: get-m-vw(30px)
+        justify-content: flex-start
+        overflow: auto
+        margin-left: get-m-vw(-20px)
+        margin-right: get-m-vw(-20px)
+        width: get-calc-mvw(100%, '+', 40px)
+
+.news-wrap:before,
+.news-wrap:after
+    display: block
+    content: ''
+    width: 1px
+    padding-right: get-m-vw(20px)
+    height: 1px
+
+
 
 .news-card
     border-radius: get-vw(15px)
@@ -21,9 +42,16 @@
     width: 30%
     transition: 0.3s ease
     cursor: pointer
+    +mediaSize(750)
+        width: get-m-vw(280px)
+        flex-shrink: 0
+        border-radius: get-m-vw(10px)
+        margin-bottom: get-m-vw(10px)
 
 .news-card + .news-card
     margin-left: 5%
+    +mediaSize(750)
+        margin-left: get-m-vw(15px)
 
 .news-card:hover
     box-shadow: 0 4px 10px rgba(0,0,0,.25)
@@ -32,6 +60,8 @@
     width: 100%
     height: get-vw(250px)
     display: flex
+    +mediaSize(750)
+        height: get-m-vw(160px)
 
 .news-image img
     width: 100%
@@ -44,12 +74,15 @@
     align-items: flex-start
     flex-direction: column
     height: 100%
+    +mediaSize(750)
+        padding: get-m-vw(20px) get-m-vw(10px) get-m-vw(30px)
 
 .new-additional-info
     display: flex
     align-items: center
-
     margin-bottom: get-vw(15px)
+    +mediaSize(750)
+        margin-bottom: get-m-vw(10px)
 
 .new-additional-item
     display: flex
@@ -57,14 +90,22 @@
 
 .new-additional-item p
     font-size: get-vw(14px)
+    +mediaSize(750)
+        font-size: get-m-vw(12px)
 
 .new-additional-item + .new-additional-item
     margin-left: get-vw(15px)
+    +mediaSize(750)
+        margin-left: get-m-vw(10px)
 
 .news-info-icon
     width: get-vw(20px)
     height: get-vw(20px)
     margin-right: get-vw(10px)
+    +mediaSize(750)
+        width: get-m-vw(15px)
+        height: get-m-vw(15px)
+        margin-right: get-m-vw(10px)
 
 .news-info-icon img
     width: 100%
@@ -77,17 +118,26 @@
     margin-bottom: get-vw(15px)
     text-transform: uppercase
     line-height: 1.2
+    +mediaSize(750)
+        font-size: get-m-vw(16px)
+        margin-bottom: get-m-vw(10px)
 
 .new-description
     font-size: get-vw(18px)
     font-weight: $regular
     margin-bottom: get-vw(25px)
     line-height: 1.3
+    +mediaSize(750)
+        font-size: get-m-vw(12px)
+        margin-bottom: get-m-vw(15px)
 
 .new-card-content a.more
     font-size: get-vw(14px)
     margin-right: auto
     margin-top: auto
+    +mediaSize(750)
+        font-size: get-m-vw(14px)
+        margin-top: auto
 
 .news-wrapper
     width: 100%
@@ -96,6 +146,8 @@
 
 .news-wrapper .news-card
     margin-top: get-vw(60px)
+    +mediaSize(750)
+        margin-top: get-m-vw(20px)
 
 .news-wrapper .news-card:nth-child(3n+1)
     margin-left: 0
