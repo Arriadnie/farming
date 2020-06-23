@@ -11,9 +11,21 @@
     display: flex
     align-items: center
     justify-content: center
+    position: relative
     margin-top: get-vw(30px)
     height: get-vw(400px)
     flex-shrink: 0
+
+.gallery a .play-btn
+    width: get-vw(50px)
+    height: get-vw(50px)
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
 
 .gallery a + a
     margin-left: 2%
