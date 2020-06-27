@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Shortcodes\ChartShortcode;
 use Illuminate\Support\ServiceProvider;
 use Webwizo\Shortcodes\Facades\Shortcode;
 use App\Shortcodes\InfoblockShortcode;
@@ -18,6 +19,7 @@ class ShortcodesServiceProvider extends ServiceProvider
     {
         Shortcode::register('infoblock', InfoblockShortcode::class);
         Shortcode::register('gallery', GalleryShortcode::class);
+        Shortcode::register('chart', ChartShortcode::class);
     }
 
     /**

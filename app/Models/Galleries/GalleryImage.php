@@ -5,6 +5,7 @@ namespace App\Models\Galleries;
 use App\Traits\Imageable;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Traits\Translatable;
+use TCG\Voyager\Facades\Voyager;
 
 class GalleryImage extends Model
 {
@@ -36,5 +37,13 @@ class GalleryImage extends Model
         }
 
         return $order;
+    }
+
+    public function isVideo() {
+        return $this->video != null && $this->video != '';
+    }
+
+    public function getVideo() {
+        return Voyager::image(json_decode($this->video)[0]->download_link);
     }
 }

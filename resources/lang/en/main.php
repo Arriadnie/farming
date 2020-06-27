@@ -8,4 +8,6 @@ return [
     'all' => 'All',
     'show-more' => 'Show more',
     'know-more' => 'Know more',
+
+    'more-statistics' => 'More statistics',
 ];

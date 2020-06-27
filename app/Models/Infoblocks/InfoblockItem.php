@@ -32,5 +32,13 @@ class InfoblockItem extends Model
     }
 
 
+    public function isVideo() {
+        return $this->video != null && $this->video != '';
+    }
+
+    public function getVideo() {
+        return Voyager::image(json_decode($this->video)[0]->download_link);
+    }
+
 
 }

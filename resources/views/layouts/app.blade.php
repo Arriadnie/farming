@@ -28,7 +28,7 @@
     </script>
 
     {{--    @include('includes.head-icons')--}}
-{{--    <link rel="shortcut icon" href="{{ App\Traits\Imageable::getImageByColumnValue(setting('site.logo'), true) }}" type="image/svg">--}}
+    <link rel="shortcut icon" href="{{ App\Traits\Imageable::getImageByColumnValue(setting('site.logo'), true) }}" type="image/svg">
 </head>
 <body class="@yield('body_class')">
 

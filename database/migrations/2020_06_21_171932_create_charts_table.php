@@ -22,6 +22,7 @@ class CreateChartsTable extends Migration
             $table->string('sub_title')->nullable();
             $table->double('min_number')->nullable();
             $table->double('max_number')->nullable();
+            $table->text('data_json')->nullable();
 
             $table->timestamps();
 

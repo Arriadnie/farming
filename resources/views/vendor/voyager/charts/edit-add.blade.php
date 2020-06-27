@@ -364,22 +364,48 @@
                 return span;
             }
 
+            getColors(count, apacity) {
+                const baseColors = [
+                    "rgba(75, 192, 192, " + apacity + ")",
+                    "rgba(255, 99, 132, " + apacity + ")",
+                    "rgba(54, 162, 235, " + apacity + ")",
+                    "rgba(255, 206, 86, " + apacity + ")",
+                    "rgba(153, 102, 255, " + apacity + ")",
+                    "rgba(255, 159, 64, " + apacity + ")"
+                ];
+                let colors = [];
+                while (colors.length < count) {
+                    colors = colors.concat(baseColors);
+                }
+                return colors.slice(0, count);
+            }
 
             getData() {
+                let datasets = [];
+
+                for (let i = 0; i < this.rows.length; i++) {
+                    datasets.push({
+                        label: $(this.rows[i].element.children()[0]).children()[0].value,
+                        data: this.cells[i].map(c => c.element.children()[0].value),
+                        backgroundColor: this.getColors(this.cells[i].length, 0.2),
+                        borderColor: this.getColors(this.cells[i].length, 1),
+                        borderWidth: 1
+                    });
+                }
+
                 return {
-                    ColumnCaptions: this.columns.map(c => c.element.children()[0].value),
-                    RowCaptions: this.rows.map(r => $(r.element.children()[0]).children()[0].value),
-                    values: this.cells.map(r => r.map(c => c.element.children()[0].value))
-                };
+                    labels: this.columns.map(c => c.element.children()[0].value),
+                    datasets: datasets
+                }
             }
 
 
             initData(data) {
-                for (let i in data.ColumnCaptions) {
-                    this.addColumn(data.ColumnCaptions[i]);
+                for (let i in data.labels) {
+                    this.addColumn(data.labels[i]);
                 }
-                for (let i in data.RowCaptions) {
-                    this.addRow(data.RowCaptions[i], data.values[i]);
+                for (let i in data.datasets) {
+                    this.addRow(data.datasets[i].label, data.datasets[i].data);
                 }
             }
 

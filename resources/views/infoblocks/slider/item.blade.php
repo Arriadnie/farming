@@ -1,7 +1,13 @@
 
 <div class="slide-wrap">
     <div class="overlay"></div>
-    <img src="{{ $slide->getImage(true) }}" alt="">
+
+    @if($slide->isVideo())
+        <video autoplay muted loop poster="{{ $slide->getImage(true) }}" src="{{ $slide->getVideo() }}"></video>
+    @else
+        <img src="{{ $slide->getImage(true) }}" alt="">
+    @endif
+
     <div class="slide-content">
         <p class="slide-title">{{ $slide->getTranslatedAttribute('title') }}</p>
         <p class="slide-subtitle">{{ $slide->getTranslatedAttribute('body') }}</p>

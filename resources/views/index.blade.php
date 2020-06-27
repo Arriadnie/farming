@@ -19,7 +19,11 @@
 
     [infoblock code="o-nas-s-kartinkoj"]
 
-    @include('charts.index')
+
+    [chart code="statistika-golovna" withlink="true"]
+
+
+
 
     @include('infoblocks.tour-preview.index')
 
