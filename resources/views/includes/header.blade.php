@@ -13,4 +13,12 @@
 
         </div>
     </div>
+
+    <div class="burger-wrap from-tablet">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+
 </header>

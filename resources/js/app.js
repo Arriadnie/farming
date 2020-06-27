@@ -56,8 +56,7 @@ require("@fancyapps/fancybox");
  * Section import vanilla JS libs
  * Import examples:
  *********************/
-// import {TweenMax} from "gsap/TweenMax";
-// import TimelineMax from "gsap/TimelineMax";
+import gsap from "gsap";
 // import PhotoSphereViewer from "photo-sphere-viewer"
 // import ScrollToPlugin from "gsap/ScrollToPlugin"
 // let scrollTo = ScrollToPlugin;
@@ -166,6 +165,41 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
         })
     })
+
+    if (window.innerWidth <=1024) {
+        isExist('.burger-wrap', (burgerWrap) => {
+            let burger = burgerWrap[0]
+            let body = document.querySelector('body');
+            let mobileMenu = document.querySelector('.main-header');
+            let burgerLines = burger.querySelectorAll('.line');
+            let tl = gsap.timeline({
+                paused: true
+            });
+
+            tl
+                .fromTo(burgerLines, {width: '100%'}, {width: '0%',  stagger: 0.2, duration: 0.3 })
+                .to(burger, {rotation: -90, duration: 0.1})
+                .fromTo(burgerLines, {width: '0%'}, {width: '100%',  stagger: 0.2, duration: 0.4 });
+
+            gsap.set(burgerLines, {width: '100%'});
+
+
+            burger.addEventListener('click', function(e) {
+                if (this.classList.contains('open')) {
+                    this.classList.remove('open');
+                    tl.reverse();
+                    gsap.to(mobileMenu, {x: '-100%'})
+                    body.style.overflow = '';
+                } else {
+                    this.classList.add('open');
+                    tl.play();
+                    gsap.to(mobileMenu, {x: '0%'});
+                    body.style.overflow = 'hidden';
+                }
+
+            });
+        });
+    }
 });
 
 createEvent(window, 'resize', loadAndResize);
@@ -186,22 +220,13 @@ function loadAndResize() {
         document.querySelector('.main-slider-wrap').style.height = window.innerHeight - window.site.headerHeight + 'px';
     });
 
-    isExist('.gallery', () => {
-    })
+    if (window.innerWidth < 1025) {
+        isExist('.main-header', (header) => {
+            header[0].style.width =  window.innerWidth + 'px';
+            header[0].style.height =  window.innerHeight - window.site.headerHeight + 'px';
+        })
+    }
 
-}
-
-function setEqualHeight(slider, selector) {
-    let maxHeight = 0;
-    slider.querySelectorAll(selector).forEach((slide) => {
-        if (maxHeight < slide.getBoundingClientRect().height) {
-            maxHeight = slide.getBoundingClientRect().height;
-        }
-    });
-
-    slider.querySelectorAll(selector).forEach((slide) => {
-        slide.style.height = maxHeight + 'px';
-    })
 
 }
 
