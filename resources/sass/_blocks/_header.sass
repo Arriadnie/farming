@@ -45,7 +45,9 @@ header nav
     justify-content: flex-start
     margin-right: auto
     +mediaSize(1024)
-        display: none
+        flex-direction: column
+        align-items: center
+        justify-content: flex-start
 
 .nav-item
     position: relative
@@ -92,6 +94,8 @@ header nav
     +letterSpace(75)
     font-size: get-vw(18px)
     padding: get-vw(15px) get-vw(30px) get-vw(15px)
+    +mediaSize(750)
+        font-size: get-m-vw(16px)
 
 .nav-item:hover .nav-link
     color: #054015
@@ -164,7 +168,9 @@ header nav
     width: 100%
     +mediaSize(1024)
         position: absolute
-        display: none
+        top: 100%
+        left: 0
+        background: #fff
 
 
 .languages,
@@ -175,6 +181,37 @@ header nav
 .languages a
     margin-right: get-vw(5px)
     text-transform: uppercase
+
+
+header .burger-wrap
+    +mediaSize(1024)
+        align-items: flex-end
+        display: flex
+        flex-direction: column
+        margin-left: auto
+        justify-content: center
+        position: relative
+        width: get-t-vw(25px)
+        margin-right: get-t-vw(40px)
+    +mediaSize(750)
+        width: get-m-vw(20px)
+        margin-right: get-m-vw(20px)
+
+header .burger-wrap .line
+    +mediaSize(1024)
+        background: #000
+        width: 100%
+        height: get-t-vw(2px)
+        border-radius: get-t-vw(5px)
+    +mediaSize(750)
+        height: 2px
+        border-radius: get-m-vw(5px)
+
+header .burger-wrap .line + .line
+    +mediaSize(1024)
+        margin-top: get-t-vw(6px)
+    +mediaSize(750)
+        margin-top: get-m-vw(4px)
 
 
 

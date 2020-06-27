@@ -27,6 +27,7 @@
         "@fancyapps/fancybox": "^3.5.7",
         "chart.js": "^2.9.3",
         "css-mqpacker": "^7.0.0",
+        "gsap": "^3.3.4",
         "laravel-mix-purgecss": "^5.0.0-rc.1",
         "slick-carousel": "^1.8.1",
         "sort-css-media-queries": "^1.5.0"
