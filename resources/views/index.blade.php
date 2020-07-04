@@ -22,18 +22,11 @@
 
     [chart code="statistika-golovna" withlink="true"]
 
-
-
-
-    @include('infoblocks.tour-preview.index')
-
+    [infoblock code="3d-tur-po-teritorii"]
 
     @include('posts.preview')
 
     [infoblock code="servisi-golovna"]
-
-
-
 
     [infoblock code="nashi-partneri-golovna"]
 

@@ -26,17 +26,19 @@
 
                </div>
            </div>
+{{--           @if(count(App\Models\SocialNetwork::all() ) > 0)--}}
+{{--           <div class="footer-contacts">--}}
 
-           <div class="footer-contacts">
-               <p class="footer-heading">@lang('main.socials'):</p>
-               <div class="footer-socials-list">
-                   @foreach(App\Models\SocialNetwork::all() as $network)
-                       <a href="{{ $network->link }}" target="_blank">
-                           <img src="{{ $network->getImage(true) }}" alt="">
-                       </a>
-                   @endforeach
-               </div>
-           </div>
+{{--               <p class="footer-heading">@lang('main.socials'):</p>--}}
+{{--               <div class="footer-socials-list">--}}
+{{--                   @foreach(App\Models\SocialNetwork::all() as $network)--}}
+{{--                       <a href="{{ $network->link }}" target="_blank">--}}
+{{--                           <img src="{{ $network->getImage(true) }}" alt="">--}}
+{{--                       </a>--}}
+{{--                   @endforeach--}}
+{{--               </div>--}}
+{{--           </div>--}}
+{{--           @endif--}}
 
 
        </div>

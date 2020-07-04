@@ -14,7 +14,7 @@
         @endforeach
 
         @foreach(explode(',', setting('contacts.mobile-phone')) as $phone)
-            <a type="phone" href="tel^{{ $phone }}">
+            <a type="phone" href="tel:{{ $phone }}">
                 <img src="{{ asset('/image/phone.svg') }}" alt="">
                 <span>{{ $phone }}</span>
             </a>

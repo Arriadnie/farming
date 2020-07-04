@@ -33,7 +33,7 @@ class InfoblockItem extends Model
 
 
     public function isVideo() {
-        return $this->video != null && $this->video != '';
+        return $this->video != null && $this->video != '' && $this->video != '[]';
     }
 
     public function getVideo() {

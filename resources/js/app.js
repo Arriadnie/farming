@@ -163,6 +163,9 @@ document.addEventListener('DOMContentLoaded', function (event) {
                 }
             });
 
+            myChart.canvas.parentNode.style.height = '100%';
+            myChart.canvas.parentNode.style.width = '100%';
+
         })
     })
 

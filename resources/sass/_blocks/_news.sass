@@ -25,11 +25,12 @@
 
 .news-wrap:before,
 .news-wrap:after
-    display: block
-    content: ''
-    width: 1px
-    padding-right: get-m-vw(20px)
-    height: 1px
+    +mediaSize(750)
+        display: block
+        content: ''
+        width: 1px
+        padding-right: get-m-vw(20px)
+        height: 1px
 
 
 
@@ -167,7 +168,7 @@
 .page-header
     position: relative
     width: 100%
-    height: get-vw(400px)
+    height: get-vw(500px)
 
 .page-header-content
     display: flex
