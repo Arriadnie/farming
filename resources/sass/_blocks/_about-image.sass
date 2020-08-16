@@ -5,6 +5,8 @@
     align-items: center
     justify-content: space-between
     position: relative
+    +mediaSize(1024)
+        padding: get-t-vw(40px) get-t-vw(40px) get-t-vw(180px)
     +mediaSize(750)
         padding: get-m-vw(40px) get-m-vw(20px) get-m-vw(120px)
 
@@ -36,6 +38,9 @@
     background: rgba(255,255,255, 0.9)
     position: relative
     z-index: 10
+    +mediaSize(1024)
+        padding: get-t-vw(30px) get-t-vw(25px) get-t-vw(30px) get-t-vw(35px)
+        width: 60%
     +mediaSize(750)
         padding: get-m-vw(15px) get-m-vw(20px)
         width: 75%
@@ -44,5 +49,7 @@
 .about-with-image .content-wrap p
     font-size: get-vw(22px)
     line-height: 1.3
+    +mediaSize(1024)
+        font-size:  get-t-vw(20px)
     +mediaSize(750)
         font-size:  get-m-vw(14px)

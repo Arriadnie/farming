@@ -24,9 +24,11 @@ header.scrolled
     padding-right: get-vw(40px)
     border-right: 1px solid #c1c1c1
     +mediaSize(1024)
-        width: 80px
-        height: 70px
+        width: get-t-vw(170px)
+        height: get-t-vw(80px)
         margin-right: auto
+        border-right: none
+        margin-left: get-t-vw(40px)
     +mediaSize(750)
         border-right: none
         width: get-m-vw(140px)
@@ -46,8 +48,9 @@ header nav
     margin-right: auto
     +mediaSize(1024)
         flex-direction: column
-        align-items: center
+        align-items: flex-start
         justify-content: flex-start
+        padding: get-m-vw(20px)
 
 .nav-item
     position: relative
@@ -74,6 +77,7 @@ header nav
     transition: 0.5s ease
     opacity: 0.7
 
+
 .sub-nav-item:hover
     opacity: 1
 
@@ -94,8 +98,12 @@ header nav
     +letterSpace(75)
     font-size: get-vw(18px)
     padding: get-vw(15px) get-vw(30px) get-vw(15px)
+    +mediaSize(1024)
+        font-size: get-t-vw(22px)
+        padding: get-t-vw(10px)
     +mediaSize(750)
-        font-size: get-m-vw(16px)
+        font-size: get-m-vw(18px)
+        padding: get-m-vw(10px)
 
 .nav-item:hover .nav-link
     color: #054015
@@ -105,19 +113,7 @@ header nav
     transform: translate(0, 0)
     opacity: 1
     pointer-events: all
-//
-//
-//.user-nav-item
-//    display: flex
-//    +mediaSize(desktop)
-//        height: get-vw(35px)
-//        width: get-vw(30px)
-//    +mediaSize(float)
-//        height: get-vw(35px)
-//        width: get-vw(30px)
-//    +mediaSize(1200)
-//        height: get-vw(35px)
-//        width: get-vw(30px)
+
 
 .header-socials
     display: flex
@@ -126,26 +122,66 @@ header nav
     justify-content: space-between
     border-bottom: 1px solid #c1c1c1
     padding: get-vw(10px) get-vw(50px) get-vw(10px) get-vw(35px)
+    +mediaSize(1024)
+        padding: 0
+        border-top: 1px solid #c1c1c1
+        margin-top: auto
+        flex-direction: column
+        align-items: flex-start
+        justify-content: flex-start
+        border-bottom: none
 
 .header-socials-list
     display: flex
     align-items: center
+    +mediaSize(1024)
+        flex-direction: column
+        align-items: flex-start
+        padding: get-t-vw(20px) get-t-vw(40px)
+    +mediaSize(750)
+        padding: get-m-vw(15px)
+
+.languages
+    +mediaSize(1024)
+        padding: get-t-vw(20px) get-t-vw(40px)
+    +mediaSize(750)
+        padding: get-m-vw(15px)
 
 .header-socials-list a
     display: flex
     align-items: center
     font-size: get-vw(14px)
+    +mediaSize(1024)
+        font-size: get-t-vw(20px)
+    +mediaSize(750)
+        font-size: get-m-vw(16px)
 
 .header-socials-list a + a
     margin-left: get-vw(25px)
+    +mediaSize(1024)
+        margin-left: 0
+        margin-top: get-t-vw(15px)
+    +mediaSize(750)
+        margin-left: 0
+        margin-top: get-m-vw(15px)
 
 .header-socials-list a img
     width: get-vw(20px)
     opacity: 0.7
     height: get-vw(20px)
+    +mediaSize(1024)
+        width: get-t-vw(30px)
+        height: get-t-vw(30px)
+    +mediaSize(750)
+        width: get-m-vw(20px)
+        height: get-m-vw(20px)
 
 .header-socials-list a img + span
     margin-left:  get-vw(10px)
+    +mediaSize(1024)
+        margin-left: get-t-vw(15px)
+    +mediaSize(750)
+        margin-left: get-m-vw(10px)
 
 .header-login
     display: flex
@@ -161,16 +197,21 @@ header nav
 .header-nav
     display: flex
     align-items: center
-
     padding-right: get-vw(50px)
+    +mediaSize(1024)
+        padding-right: 0
 
 .main-header
     width: 100%
     +mediaSize(1024)
+        transform: translate(-100%, 0)
         position: absolute
         top: 100%
         left: 0
         background: #fff
+        display: flex
+        flex-direction: column-reverse
+        justify-content: flex-end
 
 
 .languages,
@@ -183,6 +224,12 @@ header nav
     text-transform: uppercase
 
     font-size: get-vw(16px)
+    +mediaSize(1024)
+        font-size: get-t-vw(20px)
+        margin-right: get-t-vw(10px)
+    +mediaSize(750)
+        font-size: get-m-vw(16px)
+        margin-right: get-m-vw(10px)
 
 
 header .burger-wrap

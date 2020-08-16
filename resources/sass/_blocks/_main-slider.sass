@@ -21,7 +21,7 @@
     display: flex
     flex-direction: column
     align-items: flex-start
-    +mediaSize(750)
+    +mediaSize(1024)
         left: 5%
         transform: translate(0, 0)
         top: auto
@@ -34,6 +34,8 @@
     line-height: 1.15
     font-weight: $semiBold
     text-transform: uppercase
+    +mediaSize(1024)
+        font-size: get-t-vw(40px)
     +mediaSize(760)
         font-size: get-m-vw(28px)
 
@@ -43,6 +45,9 @@
     color: #fff
     line-height: 1.2
     margin-top: get-vw(20px)
+    +mediaSize(1024)
+        margin-top: get-t-vw(15px)
+        font-size: get-t-vw(26px)
     +mediaSize(750)
         margin-top: get-m-vw(10px)
         font-size: get-m-vw(14px)
@@ -55,15 +60,11 @@
     opacity: 0.5
     transition: 0.3s ease
     z-index: 10
-    +mediaSize(desktop)
-        width: get-vw(50px)
-        height: get-vw(50px)
-    +mediaSize(float)
-        width: get-vw(50px)
-        height: get-vw(50px)
-    +mediaSize(1200)
-        width: get-vw(50px)
-        height: get-vw(50px)
+    width: get-vw(50px)
+    height: get-vw(50px)
+    +mediaSize(1024)
+        width: get-t-vw(60px)
+        height: get-t-vw(60px)
     +mediaSize(750)
         width: get-m-vw(40px)
         height: get-m-vw(40px)
@@ -75,6 +76,10 @@
     transform: rotate(180deg)
     left: 50px
     top: 50%
+    +mediaSize(1024)
+        top: auto
+        bottom: get-t-vw(40px)
+        left: get-t-vw(40px)
     +mediaSize(750)
         top: auto
         bottom: get-m-vw(40px)
@@ -83,6 +88,11 @@
 .main-slider .slide-arrow.next
     right: 50px
     top: 50%
+    +mediaSize(1024)
+        top: auto
+        bottom: get-t-vw(40px)
+        left: get-t-vw(110px)
+        right: auto
     +mediaSize(750)
         top: auto
         bottom: get-m-vw(40px)
@@ -103,6 +113,9 @@ a.more
     justify-content: center
     align-items: center
     padding: get-vw(20px) get-vw(30px)
+    +mediaSize(1024)
+        font-size: get-t-vw(16px)
+        padding: get-t-vw(15px) get-t-vw(25px)
     +mediaSize(750)
         font-size: get-m-vw(14px)
         padding: get-m-vw(10px) get-m-vw(20px)
@@ -113,12 +126,16 @@ a.more.white
     border: 1px solid #ffffff
     font-weight: $bold
     padding: get-vw(15px) get-vw(25px)
+    +mediaSize(1024)
+        padding: get-t-vw(15px) get-t-vw(25px)
     +mediaSize(750)
         padding: get-m-vw(10px) get-m-vw(15px)
 
 
 .main-slider .more
     margin-top: get-vw(30px)
+    +mediaSize(1024)
+        margin-top: get-t-vw(35px)
     +mediaSize(750)
         margin-top: get-m-vw(25px)
 

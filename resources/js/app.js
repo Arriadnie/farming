@@ -130,6 +130,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
                    settings: {
                        slidesToShow: 2
                    }
+                },
+                {
+                   breakpoint: 1024,
+                   settings: {
+                       slidesToShow: 3
+                   }
                 }
             ]
         })

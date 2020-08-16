@@ -1,6 +1,9 @@
 .three-block-wrap
     padding: get-vw(60px) 0
     display: flex
+    +mediaSize(1024)
+        padding: get-t-vw(40px) 0
+        flex-direction: column
     +mediaSize(750)
         padding: get-m-vw(40px) 0
         flex-direction: column
@@ -11,6 +14,9 @@
     flex-grow: 3
     align-items: center
     padding: get-vw(80px)
+    +mediaSize(1024)
+        width: 100%
+        padding: get-t-vw(60px) get-t-vw(90px)
     +mediaSize(750)
         width: 100%
         padding: get-m-vw(50px) get-m-vw(30px)
@@ -33,6 +39,10 @@
     align-items: center
     flex-shrink: 0
     margin-bottom: get-vw(30px)
+    +mediaSize(1024)
+        width: get-t-vw(75px)
+        margin-bottom: get-t-vw(20px)
+        height: get-t-vw(75px)
     +mediaSize(750)
         width: get-m-vw(60px)
         margin-bottom: get-m-vw(15px)
@@ -49,6 +59,9 @@
     font-weight: $bold
     text-align: center
     margin-bottom: get-vw(25px)
+    +mediaSize(1024)
+        font-size: get-t-vw(30px)
+        margin-bottom: get-t-vw(15px)
     +mediaSize(750)
         font-size: get-m-vw(20px)
         margin-bottom: get-m-vw(15px)
@@ -59,6 +72,9 @@
     text-align: center
     line-height: 1.3
     margin-bottom: get-vw(40px)
+    +mediaSize(1024)
+        font-size: get-t-vw(18px)
+        margin-bottom: get-t-vw(25px)
     +mediaSize(750)
         font-size: get-m-vw(14px)
         margin-bottom: get-m-vw(25px)
@@ -66,6 +82,8 @@
 
 .three-block-item a.more
     font-size: get-vw(14px)
+    +mediaSize(1024)
+        font-size:  get-t-vw(14px)
     +mediaSize(750)
         font-size:  get-m-vw(12px)
 

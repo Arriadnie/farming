@@ -1,5 +1,7 @@
 .partners-wrap
     padding: get-vw(100px)  get-vw(170px)
+    +mediaSize(1024)
+        padding: get-t-vw(30px) get-t-vw(40px) get-t-vw(60px)
     +mediaSize(750)
         padding: get-m-vw(30px) get-m-vw(20px) get-m-vw(60px)
 
@@ -14,6 +16,11 @@
     color: $mainBg
     margin-left: auto
     margin-right: auto
+    +mediaSize(1024)
+        width: 100%
+        font-size: get-t-vw(30px)
+        padding-bottom: get-t-vw(10px)
+        margin-bottom: get-t-vw(20px)
     +mediaSize(750)
         width: 100%
         font-size: get-m-vw(28px)
@@ -25,6 +32,8 @@
     width: 100%
     text-align: left
     position: relative
+    +mediaSize(1024)
+        font-size: get-t-vw(30px)
     +mediaSize(750)
         font-size: get-m-vw(24px)
 
@@ -46,6 +55,9 @@
 
 .partners-slider
     position: relative
+    +mediaSize(1024)
+        margin-top: get-t-vw(30px)
+        margin-bottom: get-t-vw(40px)
     +mediaSize(750)
         margin-top: get-m-vw(20px)
         margin-bottom: get-m-vw(20px)
@@ -60,6 +72,11 @@
     width: get-vw(45px)
     transition: 0.3s ease
     height: get-vw(45px)
+    +mediaSize(1024)
+        height: get-t-vw(45px)
+        width: get-t-vw(45px)
+        top: 105%
+        transform: translate(50%, 0)
     +mediaSize(750)
         height: get-m-vw(40px)
         width: get-m-vw(40px)
@@ -72,12 +89,17 @@
 .partners-wrap .slide-arrow.prev
     right: 102%
     transform: rotate(180deg) translate(-50%, 0)
+    +mediaSize(1024)
+        right: 47%
+        transform: rotate(180deg) translate(50%, 0)
     +mediaSize(750)
         right: 45%
         transform: rotate(180deg) translate(50%, 0)
 
 .partners-wrap .slide-arrow.next
     left: 102%
+    +mediaSize(1024)
+        left: 47%
     +mediaSize(750)
         left: 45%
 
@@ -89,6 +111,10 @@
     box-shadow: 0 2px 4px rgba(0,0,0,.15)
     align-items: center
     justify-content: center
+    +mediaSize(1024)
+        height: get-t-vw(160px)
+        margin: get-t-vw(10px)
+        border-radius: get-t-vw(10px)
     +mediaSize(750)
         height: get-m-vw(100px)
         margin: get-m-vw(10px)
@@ -102,5 +128,7 @@
     height: 100%
     padding: get-vw(20px)
     object-fit: contain
+    +mediaSize(1024)
+        padding:  get-t-vw(10px)
     +mediaSize(750)
         padding:  get-m-vw(10px)

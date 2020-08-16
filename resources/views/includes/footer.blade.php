@@ -49,7 +49,7 @@
    </div>
     <div class="copyright">
         <p>{{ date('Y') }} CrimFarming ©</p>
-        <p>created by Zirael</p>
+        <p>created by <a target="_blank" href="http://www.zirael.com.ua/">Zirael</a></p>
     </div>
 
 
