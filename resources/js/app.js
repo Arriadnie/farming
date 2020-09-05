@@ -10,9 +10,6 @@ import Chart from 'chart.js';
 // import "./lazy-load"
 // import lozad from 'lozad'
 
-/*********************
- * initialize some site properties
- *********************/
 
 let nextArrow = `<svg class="next slide-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
             <g fill="none">
@@ -29,26 +26,13 @@ let prevArrow = `<svg class="prev slide-arrow" xmlns="http://www.w3.org/2000/svg
             <path d="M10.3,10.266,2.24,18.3A1.31,1.31,0,0,1,.384,16.45L7.512,9.341.384,2.234A1.31,1.31,0,0,1,2.24.383L10.3,8.417a1.306,1.306,0,0,1,0,1.85Z" transform="translate(19.66 15.656)" fill="currentColor"/>
         </svg>`;
 
-/*********************
- * Section import jquery and libs
- * Import examples:
- *********************/
 import $ from "jquery";
 
 require("slick-carousel");
 require("@fancyapps/fancybox");
 
-/*********************
- * Section import vanilla JS libs
- * Import examples:
- *********************/
 import gsap from "gsap";
 
-
-/*********************
- * Section Initialize some constant and manipulate DOM
- * Initialize examples:
- *********************/
 
 if (!window.site.hasOwnProperty("headerHeight")) {
     let header = document.querySelector('.main-wrapper header');
@@ -65,7 +49,7 @@ if (!window.site.hasOwnProperty("headerHeight")) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-
+    window.site.windowW = window.innerWidth;
     loadAndResize();
 
     isExist('.editor-content > table', () => {
@@ -188,7 +172,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
 });
 
-createEvent(window, 'resize', loadAndResize);
+createEvent(window, 'resize', function() {
+    if (window.site.windowW !== window.innerWidth) {
+        loadAndResize();
+    }
+});
 
 createEvent(window, 'scroll', function (e) {});
 

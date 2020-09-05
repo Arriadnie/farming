@@ -153,7 +153,7 @@ mix.extract([
 // });
 mix.then(function () {
 
-    let filesToClear = ["public/js/app-vanilla.js"];
+    let filesToClear = ["public/js/app-vanilla.js", "public/js/vanilla-ajax-module.js", "public/js/vanilla-Helper.js"];
 
     for (let i = 0; i < filesToClear.length; i++) {
         fs.stat(filesToClear[i], function(err, stats) {
