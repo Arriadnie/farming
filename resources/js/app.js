@@ -1,18 +1,4 @@
 
-/*********************
- * Section for creating in file function
- * eg:
- *      rendering custom html from json,
- *      load and resize some specific elements on page,
- *      and other
- * Initialize examples:
- *********************/
-
-
-/*********************
- * Section import custom functions
- * Import examples:
- *********************/
 
 import {
     isExist,
@@ -57,16 +43,7 @@ require("@fancyapps/fancybox");
  * Import examples:
  *********************/
 import gsap from "gsap";
-// import PhotoSphereViewer from "photo-sphere-viewer"
-// import ScrollToPlugin from "gsap/ScrollToPlugin"
-// let scrollTo = ScrollToPlugin;
-// import ScrollMagic from 'ScrollMagic';
-// import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
-// import 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap';
-// import SlimSelect from 'slim-select'
-// import GoogleMap from "./googleMapModule";
-// import AxiosGet from "./_system-classes/AxiosGet";
-// import debounce from "lodash.debounce";
+
 
 /*********************
  * Section Initialize some constant and manipulate DOM

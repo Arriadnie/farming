@@ -88,13 +88,20 @@ if (mix.inProduction()) {
         }
     });
 
+
+
+
     // combine all imported modules and libs to single ECMAScript 2015+ file.
     mix.js(["resources/js/app.js"], "public/js/vanilla.js");
-
+    mix.js(["resources/js/ajax-module.js"], "public/js/vanilla-ajax-module.js");
+    mix.js(["resources/js/Helper.js"], "public/js/vanilla-Helper.js");
 
     // convert single file into a backwards compatible
     // version of JavaScript in current and older browsers.
     mix.babel(["public/js/vanilla.js"], "public/js/app.js");
+    mix.babel(["public/js/vanilla-ajax-module.js"], "public/js/ajax-module.js");
+    mix.babel(["public/js/vanilla-Helper.js"], "public/js/Helper.js");
+
     mix.copyDirectory("resources/image", "public/image");
 
 
@@ -123,14 +130,14 @@ mix.extract([
     'jquery',
     // 'axios',
     // 'ScrollMagic',
-    // 'gsap',
+    'gsap',
     // 'jquery-ui',
     // 'jquery-ui-touch-punch',
     // 'jquery.maskedinput',
     // 'lodash.debounce',
     // 'lozad',
-    // '@fancyapps/fancybox',
-    // 'slick-carousel'
+    '@fancyapps/fancybox',
+    'slick-carousel'
 ]);
 
 // mix.sourceMaps(); // Enable sourcemaps

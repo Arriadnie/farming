@@ -1,9 +1,12 @@
 
 RewriteEngine On
 
+RewriteRule ^$ public/ [L]
+RewriteRule ((?s).*) public/$1 [L]
+
 # Handle Authorization Header
-RewriteCond %{HTTP_HOST} ^(www.)?dorada.edorada.org/$
-RewriteCond %{HTTP_HOST} ^(www.)?dorada.edorada.org$
+RewriteCond %{HTTP_HOST} ^(www.)?farm.zirael.com.ua/$
+RewriteCond %{HTTP_HOST} ^(www.)?farm.zirael.com.ua$
 
 # Redirect Trailing Slashes If Not A Folder...
 RewriteCond %{REQUEST_URI} !^/public/
@@ -13,4 +16,3 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 RewriteRule ^(.*)$ /public/$1
 RewriteRule ^(.*)$ /public/index.php [L]
-
