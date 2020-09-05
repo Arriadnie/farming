@@ -60,6 +60,18 @@
         border-radius: get-m-vw(10px)
         margin-bottom: get-m-vw(10px)
 
+.news-wrapper .news-card
+    +mediaSize(1024)
+        width: 49%
+    +mediaSize(750)
+        width: 100%
+
+.news-wrapper .news-card + .news-card
+    +mediaSize(1024)
+        margin-left: 2%
+    +mediaSize(750)
+        margin-left: 0
+
 .news-card + .news-card
     margin-left: 5%
     +mediaSize(1024)
@@ -70,6 +82,9 @@
 .news-card:hover
     box-shadow: 0 4px 10px rgba(0,0,0,.25)
 
+.news-wrapper .news-image
+    +mediaSize(750)
+        height: get-m-vw(200px)
 .news-image
     width: 100%
     height: get-vw(250px)
@@ -198,15 +213,25 @@
 .category-item
     cursor: pointer
     font-size: get-vw(20px)
+    +mediaSize(1024)
+        font-size: get-t-vw(20px)
+    +mediaSize(750)
+        font-size: get-m-vw(18px)
 
 .category-item + .category-item
     margin-left:  get-vw(20px)
+    +mediaSize(750)
+        margin-left: get-m-vw(10px)
 
 
 .page-header
     position: relative
     width: 100%
     height: get-vw(500px)
+    +mediaSize(1024)
+        height: get-t-vw(470px)
+    +mediaSize(750)
+        height: get-m-vw(470px)
 
 .page-header-content
     display: flex
@@ -217,10 +242,20 @@
     height: 100%
     position: relative
     z-index: 11
+    +mediaSize(1024)
+        padding: get-t-vw(20px) get-t-vw(20px)
+    +mediaSize(750)
+        padding: get-m-vw(20px) get-m-vw(20px)
 
 
 .page-header-content h1
     font-size: get-vw(55px)
+    +mediaSize(1024)
+        font-size: get-t-vw(26px)
+        text-align: center
+    +mediaSize(750)
+        font-size: get-m-vw(26px)
+        text-align: center
 
 .page-header img
     width: 100%
@@ -245,11 +280,17 @@
     line-height: 1.2
     font-weight: $bold
     text-align: center
+    +mediaSize(1024)
+        font-size: get-t-vw(22px)
+    +mediaSize(750)
+        font-size: get-m-vw(20px)
 
 .post-show .editor-wrap
     width: 80%
     margin-left: auto
     margin-right: auto
+    +mediaSize(1024)
+        width: 100%
 
 .pagination-wrap
     display: flex
@@ -263,6 +304,14 @@
     text-align: right
     color: #b0b0b0
     padding: get-vw(15px) 0
+    +mediaSize(1024)
+        text-align: left
+        font-size: get-t-vw(18px)
+        padding: get-t-vw(20px) 0
+    +mediaSize(750)
+        text-align: left
+        padding: get-m-vw(20px) 0 get-m-vw(10px)
+        font-size: get-m-vw(16px)
 
 .from-tablet
     display: none

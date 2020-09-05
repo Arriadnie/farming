@@ -1,11 +1,30 @@
+.gallery-wrap .block-title
+    +mediaSize(750)
+        margin-left: get-m-vw(20px)
+
 .gallery-wrap
     width: 100%
     padding: get-vw(80px) 0
+    +mediaSize(750)
+        width: get-calc-mvw(100%, '+', 40px)
+        margin-left: get-m-vw(-20px)
+        margin-right: get-m-vw(-20px)
 
 .gallery
     display: flex
     align-items: flex-start
     flex-wrap: wrap
+    +mediaSize(750)
+        flex-wrap: nowrap
+        overflow: auto
+
+.gallery:after
+    +mediaSize(750)
+        content: ''
+        display: inline-block
+        height: 1px
+        width: 1px
+        padding-right: get-m-vw(20px)
 
 .gallery a
     display: flex
@@ -15,6 +34,13 @@
     margin-top: get-vw(30px)
     height: get-vw(400px)
     flex-shrink: 0
+    +mediaSize(1024)
+        height: get-t-vw(200px)
+        margin-top: get-t-vw(15px)
+    +mediaSize(750)
+        height: get-m-vw(325px)
+        margin-top: get-m-vw(10px)
+        flex-shrink: 0
 
 .gallery a .play-btn
     width: get-vw(50px)
@@ -26,12 +52,23 @@
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+    +mediaSize(750)
+        width: get-m-vw(30px)
+        height: get-m-vw(30px)
 
 .gallery a + a
     margin-left: 2%
+    +mediaSize(750)
+        margin-left: get-m-vw(5px)
 
 .gallery a:nth-child(2n+1)
     margin-left: 0
+    +mediaSize(750)
+        margin-left: get-m-vw(5px)
+
+.gallery a:first-child
+    +mediaSize(750)
+        margin-left: get-m-vw(20px)
 
 .gallery a img
     width: 100%
@@ -40,6 +77,10 @@
 
 .gallery .small
     width: 38%
+    +mediaSize(750)
+        width: get-m-vw(335px)
 
 .gallery .big
     width: 60%
+    +mediaSize(750)
+        width: get-m-vw(335px)

@@ -64,17 +64,26 @@ a.news-slider-item[href]
 main
     overflow: hidden
 
+.container-main .post-index
+    +mediaSize(1024)
+        padding: get-m-vw(40px) get-t-vw(20px)
+    +mediaSize(750)
+        padding: get-m-vw(20px)
 .container-main
     padding: get-vw(50px) get-vw(170px)
     +mediaSize(1024)
-        padding: 40px 50px
+        padding: get-t-vw(40px)
     +mediaSize(750)
-        padding: 20px
+        padding: get-m-vw(20px)
 
 h1
     font-size: get-vw(35px)
-
     margin-bottom: get-vw(45px)
+    +mediaSize(1024)
+        font-size: get-t-vw(26px)
+    +mediaSize(750)
+        font-size: get-m-vw(24px)
+        margin-bottom: get-m-vw(20px)
 
 
 .container-250

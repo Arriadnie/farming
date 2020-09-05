@@ -3,6 +3,17 @@
     width: get-calc-vw(100%, '+', 360px)
     margin-left: get-vw(-180px)
     margin-right: get-vw(-180px)
+    +mediaSize(1024)
+        margin-left: get-t-vw(-50px)
+        margin-right: get-t-vw(-50px)
+        width: get-calc-tvw(100%, '+', 100px)
+        padding: get-t-vw(30px) get-t-vw(40px)
+    +mediaSize(750)
+        margin-left: get-m-vw(-20px)
+        margin-right: get-m-vw(-20px)
+        padding: get-m-vw(20px)
+        width: get-calc-mvw(100%, '+', 40px)
+
 
 .technologies-list
     display: flex
@@ -13,12 +24,20 @@
     align-items: center
     justify-content: space-between
     margin-bottom: get-vw(150px)
+    +mediaSize(1024)
+        margin-bottom: get-t-vw(100px)
+        flex-direction: column
+    +mediaSize(750)
+        margin-bottom: get-m-vw(90px)
 
 
 .technology-item:nth-child(odd) .image
     order: 5
     margin-left: get-vw(90px)
     margin-right: 0
+    +mediaSize(1024)
+        order: unset
+        margin-left: 0
 
 
 .technology-item .content
@@ -32,6 +51,14 @@
     margin-right: get-vw(80px)
     display: flex
     flex-shrink: 0
+    +mediaSize(1024)
+        height: get-t-vw(300px)
+        margin-right: 0
+        width: 100%
+        margin-bottom: get-t-vw(40px)
+    +mediaSize(750)
+        margin-bottom: get-m-vw(20px)
+        height: get-m-vw(220px)
 
 .technology-item .image img
     width: 100%
@@ -43,13 +70,27 @@
     font-weight: $bold
     color: $mainBg
     margin-bottom: get-vw(35px)
+    +mediaSize(1024)
+        font-size: get-t-vw(24px)
+        margin-bottom: get-t-vw(15px)
+    +mediaSize(750)
+        font-size: get-m-vw(22px)
+        margin-bottom: get-m-vw(15px)
 
 .technology-item .description
     font-size: get-vw(22px)
     line-height: 1.3
+    +mediaSize(1024)
+        font-size: get-t-vw(20px)
+    +mediaSize(750)
+        font-size: get-m-vw(18px)
 
 .technology-item .more
     margin-top: get-vw(35px)
+    +mediaSize(1024)
+        margin-top:  get-t-vw(20px)
+    +mediaSize(750)
+        margin-top: get-m-vw(15px)
 
 
 

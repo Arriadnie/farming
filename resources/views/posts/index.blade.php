@@ -4,6 +4,8 @@
 
 @section('content-title', 'Posts')
 
+@section('body_class', 'post-index')
+
 @section('content')
 
     <div class="container-main">
