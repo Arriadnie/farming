@@ -59,19 +59,17 @@ document.addEventListener('DOMContentLoaded', function (event) {
         })
     });
 
-    isExist('.main-slider', () => {
-        let slider = document.querySelector('.main-slider');
 
-        $(slider).slick({
-            infinite: true,
-            dots: false,
-            prevArrow: prevArrow,
-            nextArrow: nextArrow,
-            autoplay: true,
-            autoplaySpeed: 6500,
-            pauseOnHover: false
-        })
-    });
+    $('.main-slider').slick({
+        dots: false,
+        prevArrow: prevArrow,
+        nextArrow: nextArrow,
+        autoplay: true,
+        autoplaySpeed: 6500,
+        pauseOnHover: false,
+        infinite: true,
+        speed: 700
+    })
 
     isExist('.partners-slider', () => {
         let slider = document.querySelector('.partners-slider');

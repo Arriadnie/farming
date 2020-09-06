@@ -13,6 +13,7 @@
 @section('content')
 
     <div style="background: url({{ $page->getImage(true) }}) no-repeat center bottom / cover; background-attachment: fixed;" class="page-header">
+        <img src="{{ $page->getImage(true) }}" alt="">
         <div class="page-header-overlay"></div>
         <div class="page-header-content">
             <h1>{{ $page->getTranslatedAttribute('title') }}</h1>

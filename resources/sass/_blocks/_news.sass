@@ -231,8 +231,21 @@
     height: get-vw(500px)
     +mediaSize(1024)
         height: get-t-vw(470px)
+        background: none!important
     +mediaSize(750)
+        background-attachment: unset
         height: get-m-vw(470px)
+
+.page-header img
+    display: none
+    +mediaSize(1024)
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        object-fit: cover
+        display: flex
 
 .page-header-content
     display: flex
