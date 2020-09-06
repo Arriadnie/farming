@@ -9,6 +9,6 @@
                 <svg><use xlink:href="#play"></use></svg>
             </span>
         @endif
-    <img src="{{ $image->getImage(true) }}" alt="{{ $image->getTranslatedAttribute('title') }}" >
+    <img class="lozad" data-src="{{ $image->getImage(true) }}" alt="{{ $image->getTranslatedAttribute('title') }}" >
     @endif
 </a>

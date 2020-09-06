@@ -1,13 +1,13 @@
 
 <div class="news-card">
     <a href="{{ route('post', $post->slug) }}" class="news-image">
-        <img src="{{ $post->getImage(true) }}" alt="">
+        <img class="lozad" data-src="{{ $post->getImage(true) }}" alt="">
     </a>
     <div class="new-card-content">
         <div class="new-additional-info">
             <div class="new-additional-item">
                 <div class="news-info-icon">
-                    <img src="{{ asset('/image/calendar.svg') }}" alt="">
+                    <img class="lozad" data-src="{{ asset('/image/calendar.svg') }}" alt="">
                 </div>
                 <p>{{ $post->created_at->format('d.m.y') }}</p>
             </div>

@@ -1,6 +1,6 @@
 <div  class="technology-item">
     <div class="image">
-        <img src="{{ $item->getImage(true) }}" alt="">
+        <img class="lozad" data-src="{{ $item->getImage(true) }}" alt="">
     </div>
 
     <div class="content">

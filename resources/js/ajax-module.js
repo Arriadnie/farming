@@ -1,5 +1,5 @@
 import {isExist} from "./delta-functions";
-
+import lozad from 'lozad'
 window.postConfig = {
     categoryId: 0,
     pageNumber: 1
@@ -33,6 +33,8 @@ function categoryClick(categoryItem) {
         else if (document.querySelector('.pagination-wrap').classList.contains('hidden')) {
             document.querySelector('.pagination-wrap').classList.remove('hidden');
         }
+        const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+        observer.observe();
         window.postConfig.pageNumber++;
     })
 }

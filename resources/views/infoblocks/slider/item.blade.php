@@ -5,7 +5,7 @@
     @if($slide->isVideo())
         <video autoplay muted loop poster="{{ $slide->getImage(true) }}" src="{{ $slide->getVideo() }}"></video>
     @else
-        <img src="{{ $slide->getImage(true) }}" alt="">
+        <img class="lozad" data-src="{{ $slide->getImage(true) }}" alt="">
     @endif
 
     <div class="slide-content">

@@ -1,6 +1,6 @@
 <header>
     <a href="/" class="logo-wrap">
-        <img src="{{ asset('/image/logo-color.png') }}" alt="">
+        <img class="lozad" data-src="{{ asset('/image/logo-color.png') }}" alt="">
     </a>
     <div class="main-header">
         @include('includes.header-socials')

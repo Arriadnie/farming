@@ -7,8 +7,7 @@ import {
 import Chart from 'chart.js';
 
 
-// import "./lazy-load"
-// import lozad from 'lozad'
+import lozad from 'lozad'
 
 
 let nextArrow = `<svg class="next slide-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -50,6 +49,8 @@ if (!window.site.hasOwnProperty("headerHeight")) {
 
 document.addEventListener('DOMContentLoaded', function (event) {
     window.site.windowW = window.innerWidth;
+    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+    observer.observe();
     loadAndResize();
 
     isExist('.editor-content > table', () => {

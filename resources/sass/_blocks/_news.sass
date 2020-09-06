@@ -89,6 +89,7 @@
     width: 100%
     height: get-vw(250px)
     display: flex
+    flex-shrink: 0
     +mediaSize(1024)
         height: get-t-vw(220px)
     +mediaSize(750)
@@ -318,5 +319,11 @@
     +mediaSize(1024)
         display: flex
 
+img.lozad
+    opacity: 0
+    transition: opacity 0.8s ease
+
+img[data-loaded="true"].lozad
+    opacity: 1
 
 

@@ -1,7 +1,7 @@
 <footer>
     <div class="footer-content">
         <div class="footer-logo">
-            <img src="{{ asset('/image/logo.png') }}" alt="">
+            <img class="lozad" data-src="{{ asset('/image/logo.png') }}" alt="">
         </div>
     </div>
 
@@ -13,13 +13,13 @@
                <div class="footer-contact-list">
                    @foreach(explode(',', setting('contacts.email')) as $email)
                        <a type="mail" href="mailto:{{ $email }}">
-                           <img src="{{ asset('/image/mail.svg') }}" alt="">
+                           <img class="lozad" data-src="{{ asset('/image/mail.svg') }}" alt="">
                            <span>{{ $email }}</span>
                        </a>
                    @endforeach
                    @foreach(explode(',', setting('contacts.mobile-phone')) as $phone)
                        <a type="phone" href="tel^{{ $phone }}">
-                           <img src="{{ asset('/image/phone.svg') }}" alt="">
+                           <img class="lozad" data-src="{{ asset('/image/phone.svg') }}" alt="">
                            <span>{{ $phone }}</span>
                        </a>
                    @endforeach

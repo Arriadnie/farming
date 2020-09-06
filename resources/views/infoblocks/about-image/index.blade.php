@@ -5,7 +5,7 @@
 
     </div>
 
-    <img src="{{ $infoblock->getImage(true) }}" alt="">
+    <img class="lozad" data-src="{{ $infoblock->getImage(true) }}" alt="">
 
     <div class="overlay-bg"></div>
 

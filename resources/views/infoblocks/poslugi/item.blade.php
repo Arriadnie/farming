@@ -1,6 +1,6 @@
 <div class="service-slide">
     <div class="service-icon">
-        <img src=" {{ $item->getImage(true)  }}" alt="">
+        <img class="lozad" data-src=" {{ $item->getImage(true)  }}" alt="">
     </div>
     <p class="service-name">{{ $item->getTranslatedAttribute('title') }}</p>
     <p class="service-description">{{ $item->getTranslatedAttribute('body') }}</p>

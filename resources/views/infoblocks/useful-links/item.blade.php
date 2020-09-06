@@ -1,7 +1,7 @@
 
 <a href="{{ $item->button_link ?? "#" }}" class="additional-link-item">
     <div class="additional-link-icon">
-        <img src="{{ $item->getImage(true) }}" alt="">
+        <img class="lozad" data-src="{{ $item->getImage(true) }}" alt="">
     </div>
     <div class="additional-content">
         <p class="additional-name">{{ $item->getTranslatedAttribute('title') }}</p>

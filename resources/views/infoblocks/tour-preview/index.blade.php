@@ -1,7 +1,7 @@
 <div class="tour-wrap">
 
 
-    <img src="{{ $infoblock->getImage(true) }}" alt="">
+    <img class="lozad" data-src="{{ $infoblock->getImage(true) }}" alt="">
 
     <div class="tour-content">
         <p class="block-title left">{{$infoblock->getTranslatedAttribute("title") }}</p>
